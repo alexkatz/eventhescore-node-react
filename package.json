@@ -1,0 +1,30 @@
+{
+  "name": "eventhescore-react",
+  "version": "1.0.0",
+  "description": "Tracks scores for pool at the office",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-client": "cd client && npm start",
+    "build-server": "babel src -d build",
+    "build-client": "cd client && npm run build",
+    "clean": "rm -rf build; cd client && rm -rf build",
+    "heroku-prebuild": "npm install --only=dev && cd client && npm install --only=dev && npm install --only=prod",
+    "heroku-postbuild": "npm run build-client && npm run build-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "mongodb": "^2.2.23",
+    "mongoose": "^4.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-node7": "^1.4.0",
+    "babel-register": "^6.18.0",
+    "dotenv": "^4.0.0"
+  }
+}
