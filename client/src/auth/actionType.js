@@ -1,0 +1,4 @@
+export const AUTHENTICATE = 'auth/AUTHENTICATE'
+export const AUTHENTICATE_SUCCESS = 'auth/AUTHENTICATE_SUCCESS'
+export const AUTHENTICATE_FAILURE = 'auth/AUTHENTICATE_FAILURE'
+export const LOG_OUT = 'auth/LOG_OUT'

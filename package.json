@@ -1,6 +1,10 @@
 {
-  "name": "eventhescore-react",
+  "name": "eventhescore-node",
   "version": "1.0.0",
+  "engines": {
+    "node": "7.6.0",
+    "npm": "4.1.2"
+  },
   "description": "Tracks scores for pool at the office",
   "main": "server.js",
   "scripts": {
@@ -16,9 +20,13 @@
   "license": "ISC",
   "dependencies": {
     "hapi": "^16.1.0",
+    "hapi-auth-jwt2": "^7.2.4",
+    "hapi-require-https": "^2.1.0",
     "inert": "^4.1.0",
+    "jsonwebtoken": "^7.3.0",
     "mongodb": "^2.2.23",
-    "mongoose": "^4.8.2"
+    "mongoose": "^4.8.2",
+    "node-fetch": "^1.6.3"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

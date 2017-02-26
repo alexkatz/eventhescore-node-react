@@ -1,11 +1,13 @@
 import Path from 'path'
 import { staticFiles } from './routes/staticFiles'
 import { score } from './routes/score'
+import { authenticate } from './routes/authenticate'
 
 const api = (server, options, next) => {
   server.route([
     ...staticFiles,
     ...score,
+    ...authenticate,
   ])
 
   server.ext('onPostHandler', (request, reply) => {

@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux'
-import { reducer as match } from '../matchList/reducer'
+import { routerReducer as routing } from 'react-router-redux'
+import { reducer as session } from '../session/reducer'
+import { reducer as auth } from '../auth/reducer'
 
 export const rootReducer = combineReducers({
-  match,
+  routing,
+  auth,
+  session,
 })
 
