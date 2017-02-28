@@ -18,13 +18,18 @@ export const authenticate = [{
       const { email, firstName, lastName, imageUrl } = await authenticateFacebook(payload)
       const player = await Player.findOne({ email }).exec()
       if (player) return reply({
-        player,
+        ...player.toObject(),
+        token: jwt.sign(player, process.env.SECRET_KEY)
       })
       const newPlayer = new Player({ email, firstName, lastName, imageUrl })
       await newPlayer.save()
-      return reply(newPlayer)
+      return reply({
+        ...newPlayer.toObject(),
+        token: jwt.sign(newPlayer, process.env.SECRET_KEY)
+      })
     } catch (err) {
       console.log('Error authenticating', err)
+      return reply(Boom.badImplementation())
     }
   },
 }]

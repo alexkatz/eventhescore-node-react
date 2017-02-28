@@ -17,7 +17,6 @@ class SessionList extends Component {
         style={{
           width,
           height: SESSION_LIST_HEIGHT,
-          backgroundColor: 'orange',
         }}
       >
       </div>

@@ -9,6 +9,14 @@ const AppStyle = () => (
         overflow: 'hidden',
         fontFamily: 'Amiko',
       },
+      '.no-select': {
+        WebkitTouchCallout: 'none',
+        WebkitUserSelect: 'none',
+        KhtmlUserSelect: 'none',
+        MozUserSelect: 'none',
+        MsUserSelect: 'none',
+        userSelect: 'none,'
+      },
     }}
   />
 )

@@ -16,6 +16,7 @@ export const authenticate = ({ accessToken, profile }) =>
         accessToken,
         profile,
       })
+      console.log(user)
       dispatch(authenticateSuccess(user))
     } catch (error) {
       dispatch({ type: actionType.AUTHENTICATE_FAILURE, payload: { error } })
