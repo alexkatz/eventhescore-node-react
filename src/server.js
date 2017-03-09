@@ -38,9 +38,7 @@ server.register([
     mongoose.connect('mongodb://localhost/eventhescore')
     const db = mongoose.connection
     db.on('error', console.error.bind(console, 'connection error:'))
-    db.once('open', async () => {
-      db.dropDatabase()
-    })
+    db.once('open', async () => db.dropDatabase()) // TODO: don't drop every time once we get things working...
     console.log('server running at:', server.info.uri)
   })
 })

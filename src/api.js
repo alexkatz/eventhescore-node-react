@@ -1,6 +1,6 @@
 import Path from 'path'
 import { staticFiles } from './routes/staticFiles'
-import { score } from './routes/score'
+import { score } from './routes/session'
 import { authenticate } from './routes/authenticate'
 
 const api = (server, options, next) => {
